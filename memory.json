@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "sessions": [
+    {
+      "id": "1f51f6fc-ac42-46c7-96a7-a59923484c55",
+      "timestamp": "2026-11-09T08:07:44.034Z",
+      "timer": "5 sec",
+      "timerSeconds": 5,
+      "completed": true
+    },
+    {
+      "id": "867754ed-2cbd-438c-a383-f8fcb3e428c6",
+      "timestamp": "2026-11-09T08:34:20.023Z",
+      "timer": "30 sec",
+      "timerSeconds": 30,
+      "completed": true
+    },
+    {
+      "id": "13d525a8-aacd-47a1-8d56-0eae6b970d12",
+      "timestamp": "2026-11-09T08:35:07.948Z",
+      "timer": "5 sec",
+      "timerSeconds": 5,
+      "completed": false
+    },
+    {
+      "id": "7873b8e9-d6a8-4b23-b09b-84c6d196048f",
+      "timestamp": "2026-11-09T08:46:11.742Z",
+      "timer": "5 sec",
+      "timerSeconds": 5,
+      "completed": true
+    }
+  ]
+}

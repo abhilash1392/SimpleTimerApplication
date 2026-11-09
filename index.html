@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="timer-card" aria-labelledby="page-title">
+      <p class="eyebrow">Focus tool</p>
+      <h1 id="page-title">Simple Timer</h1>
+      <p class="intro">Choose how long you want to run, then start when you are ready.</p>
+
+      <form id="timer-form" novalidate>
+        <label for="duration">Duration</label>
+        <div class="input-row">
+          <input
+            id="duration"
+            name="duration"
+            type="text"
+            inputmode="text"
+            placeholder="e.g. 2:30 or 25"
+            pattern="[0-9]+(:[0-9]{1,2})?"
+            aria-describedby="validation-message"
+          />
+          <span aria-hidden="true">min</span>
+        </div>
+        <p class="preset-label">Quick durations</p>
+        <div class="preset-buttons" role="group" aria-label="Quick duration presets">
+          <button type="button" data-duration="30" aria-pressed="false">30 sec</button>
+          <button type="button" data-duration="60" aria-pressed="false">1 min</button>
+          <button type="button" data-duration="300" aria-pressed="false">5 min</button>
+          <button type="button" data-duration="600" aria-pressed="false">10 min</button>
+          <button type="button" data-duration="900" aria-pressed="false">15 min</button>
+          <button type="button" data-duration="1800" aria-pressed="false">30 min</button>
+        </div>
+        <p id="validation-message" class="validation-message" role="alert"></p>
+        <p id="audio-status" class="audio-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <output id="time-display" class="time-display" aria-live="polite" aria-label="Time remaining: 00 minutes 00 seconds">00:00</output>
+
+      <div class="controls" aria-label="Timer controls">
+        <button id="run-button" type="button">Run</button>
+        <button id="pause-button" type="button" disabled>Pause</button>
+        <button id="stop-button" type="button" disabled>Stop</button>
+      </div>
+
+      <section class="history-controls" aria-label="Timer history">
+        <button id="export-history-button" type="button">Download JSON</button>
+        <p id="history-status" class="history-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
